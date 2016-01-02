@@ -15,11 +15,7 @@ cred_tok = uri.user ? uri.user : ''
 if cred_tok.length > 0
     passwd_tok = uri.password ? ":#{uri.password}" : ''
     cred_tok << passwd_tok << '@'
-    $stderr.puts "uri.user: " + uri.user
-    $stderr.puts "uri.password: " + uri.password
-    $stderr.puts "cred_tok: " + cred_tok
 end
 
 command = "ssh #{port_tok} #{cred_tok}#{uri.host}"
-$stderr.puts 'Running: $ ' + command
 exec command
