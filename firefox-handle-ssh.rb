@@ -1,7 +1,9 @@
 #!/usr/bin/ruby
 
-unless ARGV[0] == '--DO--'
-    commands = "lxterminal --working-directory=#{ENV['HOME']} --command=\"sh -c '#{$0} --DO-- #{ARGV.join ' '}; #{ENV['SHELL']}'\""
+$HandOver_tok = '--DO'
+unless ARGV[0] == $HandOver_tok
+    shell = ENV['SHELL'] || '/bin/sh'
+    commands = "lxterminal --working-directory=#{ENV['HOME']} --command=\"/bin/sh -c '#{$0} #{$HandOver_tok} #{ARGV.join ' '}; #{shell}'\""
     exec commands
 end
 
