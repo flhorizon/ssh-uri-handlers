@@ -1,5 +1,5 @@
-# firefox-lxde-ssh-uri-handler
-A quick hack to enable Firefox to handle SSH URIs under LXDE.
+# SSH URI handlers
+Quick hacks to add SSH URI handling on systems I use (Linux/LXDE, Windows); with a focus on Firefox.
 
 ## Details
 Hacked for ruby 2.1.  
