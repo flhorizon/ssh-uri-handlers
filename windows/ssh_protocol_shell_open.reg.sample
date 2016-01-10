@@ -1,0 +1,15 @@
+REGEDIT4
+ 
+[HKEY_CLASSES_ROOT\ssh]
+ 
+@="URL:ssh Protocol"
+ 
+"URL Protocol"=""
+ 
+[HKEY_CLASSES_ROOT\ssh\shell]
+ 
+[HKEY_CLASSES_ROOT\ssh\shell\open]
+ 
+[HKEY_CLASSES_ROOT\ssh\shell\open\command]
+ 
+@="\"C:\\Ruby22-x64\\bin\\rubyw.exe\" \"C:\\Users\\<IAmTheUser>\\.bin\\putty_wrapper.rb\" \"%1\""
