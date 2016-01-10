@@ -1,10 +1,12 @@
 #!/usr/bin/ruby
 
-$HandOver_tok = '--DO'
-unless ARGV[0] == $HandOver_tok
+HandOver_tok = '--DO'
+unless ARGV[0] == HandOver_tok
+    # Execute LXDEterminal and make it run the rest of this script,
+    # forwarding the URI argument.
     shell = ENV['SHELL'] || '/bin/sh'
-    commands = "lxterminal --working-directory=#{ENV['HOME']} --command=\"/bin/sh -c '#{$0} #{$HandOver_tok} #{ARGV.join ' '}; #{shell}'\""
-    exec commands
+    command = %Q|lxterminal --working-directory=#{ENV['HOME']} --command="/bin/sh -c '#{$0} #{HandOver_tok} #{ARGV.join ' '}; #{shell}'"|
+    exec command
 end
 
 require 'addressable/uri'
