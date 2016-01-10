@@ -18,8 +18,8 @@ A fully operational ruby environment on Windows enabled me to re-use the 'addres
 ## Configuration and Usage
 
 Requires ruby (works with 2.2)   
-Requires the 'addressable' gem.   
-Require putty   
+Requires the 'addressable' gem   
+Requires putty   
    
 1. Optionally add the SSH URI handling to the registry :
  - (it allows running more complex commands than PATH\\TO\\EXE.EXE URI)
